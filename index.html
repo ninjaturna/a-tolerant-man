@@ -136,34 +136,20 @@
         </div>
       </div>
 
-      <!-- Right: 3-Photo Grid -->
+      <!-- Right: 4-Photo Collage -->
       <div class="grid grid-cols-2 grid-rows-2 gap-3" style="height: 520px;">
 
-        <!-- Left tall — row-span-2 -->
-        <div class="row-span-2 overflow-hidden">
-          <img
-            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608676/1_obx1ix.jpg"
-            alt="Bill Evans"
-            class="w-full h-full object-cover"
-          />
-        </div>
-
-        <!-- Top right -->
         <div class="overflow-hidden">
-          <img
-            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608677/915793DC-5528-4111-B767-54407BFA8B80_agr2uo.jpg"
-            alt="Bill Evans"
-            class="w-full h-full object-cover"
-          />
+          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608673/7551A4F1-C123-4581-A5A8-31DC5CBA1E3E_hw3xby.jpg" alt="Bill Evans" class="w-full h-full object-cover" />
         </div>
-
-        <!-- Bottom right -->
         <div class="overflow-hidden">
-          <img
-            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608673/7551A4F1-C123-4581-A5A8-31DC5CBA1E3E_hw3xby.jpg"
-            alt="Bill Evans"
-            class="w-full h-full object-cover"
-          />
+          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608672/DE4F8E55-0962-482F-9A84-E2112129D873_kysos5.jpg" alt="Bill Evans" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden">
+          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610587/4A71EDE7-6E11-43FE-94D0-28C9360431F2_okiqzu.jpg" alt="Bill Evans" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden">
+          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610596/FullSizeRender_q963a4.heic" alt="Bill Evans" class="w-full h-full object-cover" />
         </div>
 
       </div>
@@ -206,19 +192,46 @@
       <div class="mb-16 pl-8 border-l-2 border-secondary">
         <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-3">Part One</p>
         <h3 class="font-serif text-2xl font-bold text-tertiary mb-6">A Night in Salome, Arizona</h3>
+
+        <!-- Preview -->
         <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
-          While it was early in my trip, the night I spent in Salome, Arizona was an example of how the end of a day's ride could go. Like most times, it was in the late afternoon an hour or so before sundown. All along the "Southern Route" this was a beautiful time of day. Colors were accentuated and the April temperatures were cool enough to keep me comfortable, but without the chill that would greet me in the morning. I know it wasn't the case, but it seemed like I was always coasting gently downhill into that night's destination.
+          While it was early in my trip, the night I spent in Salome, Arizona was an example of how the end of a day&rsquo;s ride could go. Like most times, it was in the late afternoon an hour or so before sundown. All along the &ldquo;Southern Route&rdquo; this was a beautiful time of day. Colors were accentuated and the April temperatures were cool enough to keep me comfortable, but without the chill that would greet me in the morning. I know it wasn&rsquo;t the case, but it seemed like I was always coasting gently downhill into that night&rsquo;s destination.
         </p>
-        <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
-          In Salome, I didn't have to look very far because directly across the street from my little budget motel was the Salome Cafe, the other half of which was Dan's Cactus Bar. Beer does a great job of rehydrating and helping with electrolyte balance. After a couple, I walked across to the other side and the restaurant. A waitress came over, and I mentioned I was a week into my cross-country bicycle trip. She asked if I liked meatloaf, and I answered in the affirmative. She proceeded to bring me meatloaf the size of a shoe.
-        </p>
-        <div class="overflow-hidden mb-4" style="max-height: 320px;">
-          <img
-            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608672/DE4F8E55-0962-482F-9A84-E2112129D873_kysos5.jpg"
-            alt="The road along the Southern Route"
-            class="w-full object-cover object-center"
-          />
+
+        <!-- Expand toggle -->
+        <button onclick="toggleExcerpt(this)" class="inline-flex items-center gap-2 text-secondary font-serif text-sm font-semibold mb-8 hover:text-secondary/70 transition-colors">
+          Read the full excerpt <span class="toggle-arrow">↓</span>
+        </button>
+
+        <!-- Full text (hidden by default) -->
+        <div class="excerpt-full hidden">
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            There were numerous reasons I chose the Southern Route. Foremost, it was the shortest. While I still had mountains to traverse, by starting in Southern California, I got through the Rockies at the beginning of the trip and did not have to deal with any of the Appalachians. The towns into which I was coasting were almost universally small. I can count on one hand the number of large cities I went through. Phoenix, El Paso, New Orleans (a slight detour by choice), were among them. I was using maps from a bicycle association that broke my trip down into the most minute of pieces. They would take me on roads tested and reported on by numerous fellow bicyclists. I would get warnings like there will be no place to get water for the next 30 miles, or comments on severe elevation changes ahead. Unless there was no other option, I was kept off Interstate highways. I would find myself peddling along a seemingly ancient highway running at times alongside the Interstate that had replaced it. Importantly, I always knew how far it was to the next bicycle repair shop. It was my practice to stop and get my bike checked out at least once a week.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            The folks working in these shops were the real behind the scenes heroes in my journey. In recognition of the fact that I was unable to make a reservation, and as tribute to what I was attempting, I generally got instant service.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            The maps included cards with updates from riders following the Southern Route. This system helped insure I had the latest information. If a cyclist reported something that would be helpful to others who would be following after him, a card would be inserted into the folds of the map. These would later become a permanent part of the guide. It might be about a closed bike shop, restaurant, motel, or changes to road conditions. Still, it would happen that a motel I was counting on had closed, or the meal that had been recommended would not be enjoyed as the restaurant no longer existed.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            I was traveling roads along which small towns had been established over many generations. But, with an Interstate highway system now in place, most of these little towns were bypassed and were dying. Some version of a Dollar Store was a fixture I could count on seeing. I saw one Main Street after another with more stores closed than open. I would slow to almost a crawl as I entered a town. This was always the best part of my day as I felt great anticipation. From my maps, I already knew my motel choices could range from several to only one. The same was true of eating places, but I was always on the prowl for a restaurant that reached out to me.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            In Salome, I didn&rsquo;t have to look very far because directly across the street from my little budget motel was the Salome Cafe, the other half of which was Dan&rsquo;s Cactus Bar. You can guess my first stop. Beer does a great job of rehydrating and helping with electrolyte balance. After a couple, I walked across to the other side and the restaurant. There were about a dozen tables scattered around, and I chose one by the window that let me watch the world go by. A waitress came over, and I mentioned I was a week into my cross-country bicycle trip. I said I was really hungry and asked for her recommendation. She asked if I liked meatloaf, and I answered in the affirmative. She proceeded to bring me meatloaf the size of a shoe. Filling out the rest of the plate was a small mountain of mashed potatoes and a serving of peas. I did not realize that servings of this magnitude existed. Suffice it to say, I ate every last bit. The number of calories I consumed on this trip is incalculable, but over the 41 days and 2600 miles I only lost about 12 pounds.
+          </p>
+
+          <!-- Photos -->
+          <div class="grid grid-cols-2 gap-3 mb-6" style="max-height: 320px;">
+            <div class="overflow-hidden h-full">
+              <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610596/FullSizeRender_q963a4.heic" alt="On the road — Southern Route" class="w-full h-full object-cover" />
+            </div>
+            <div class="overflow-hidden h-full">
+              <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608670/8B0112FD-A0C7-48B1-BF0C-A34D963FE03D_oiwscx.jpg" alt="Somewhere along the Southern Route" class="w-full h-full object-cover" />
+            </div>
+          </div>
         </div>
+
         <p class="text-xs uppercase tracking-[0.2em] text-secondary/60 font-serif mb-2">— From Part One</p>
       </div>
 
@@ -226,23 +239,68 @@
       <div class="pl-8 border-l-2 border-secondary">
         <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-3">Part Two</p>
         <h3 class="font-serif text-2xl font-bold text-tertiary mb-6">Two Roads</h3>
+
+        <!-- Preview -->
         <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
-          "Stopping by Woods on a Snowy Evening" by Robert Frost is a favorite poem for many, including me. While the words: "But I have promises to keep, And miles to go before I sleep" are not referring to a journey like mine, they still came to me regularly along the way. I did once come to a complete stop as I saw the road ahead dividing. My map had me taking the route to the right, but I sat there for several minutes as I thought of another Frost poem and these words:
+          &ldquo;Stopping by Woods on a Snowy Evening&rdquo; by Robert Frost is a favorite poem for many, including me. While the words: &ldquo;But I have promises to keep, And miles to go before I sleep&rdquo; are not referring to a journey like mine, they still came to me regularly along the way. I did once come to a complete stop as I saw the road ahead dividing. My map had me taking the route to the right, but I sat there for several minutes as I thought of another Frost poem and these words:
         </p>
         <blockquote class="font-body text-lg text-tertiary/70 italic leading-relaxed border-l-2 border-secondary/30 pl-6 mb-8">
           Two roads diverged in a wood, and I &mdash; I took the one less traveled by,<br/>
           And that has made all the difference.
         </blockquote>
         <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
-          Frost's roads may have diverged in a quiet wood, but mine were to be in less poetic places &mdash; including army offices, where the chain of command mattered more than compass direction. Still, the choice was the same: standstill or step forward.
+          Frost&rsquo;s roads may have diverged in a quiet wood, but mine were to be in less poetic places &mdash; including army offices, where the chain of command mattered more than compass direction. Still, the choice was the same: standstill or step forward.
         </p>
-        <div class="overflow-hidden mb-4" style="max-height: 320px;">
-          <img
-            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608671/2A9A7314-25D6-4D36-BA01-A317EBF0F089_pcqstc.jpg"
-            alt="The road diverging — somewhere along the route"
-            class="w-full object-cover object-center"
-          />
+
+        <!-- Expand toggle -->
+        <button onclick="toggleExcerpt(this)" class="inline-flex items-center gap-2 text-secondary font-serif text-sm font-semibold mb-8 hover:text-secondary/70 transition-colors">
+          Read the full excerpt <span class="toggle-arrow">↓</span>
+        </button>
+
+        <!-- Full text (hidden by default) -->
+        <div class="excerpt-full hidden">
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            I had been in Knoxville for a few months when we found out our Sargent was being transferred to Vietnam. It seemed like once he got that news he disappeared. He would spend pretty much all day in the Lieutenant&rsquo;s office. This caused some issues as there was nobody there to tell the soldiers who gave the 6AM test they could leave early, or that a group set to leave at 4PM could go. So, everyone was staying until 5PM. This was particularly a problem for those of us with second jobs. We were all complaining, but no one was doing anything. After about a week, one afternoon around 2PM I knocked on the Lieutenant&rsquo;s door. I was admitted and said: &ldquo;We&rsquo;re caught up on the morning&rsquo;s scoring; do you think the early guys could leave?&rdquo; They both stared at me for the longest time before the lieutenant answered: &ldquo;Sure, tell them they can go.&rdquo;
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            The next day I was called into his office and sat before the two of them. I was reminded that the Sargent shipped out for Vietnam in a few weeks. Then it happened. &ldquo;Specialist Evans, would you like to be in charge of Mental Testing?&rdquo; The words from the Lieutenant took me by complete surprise and my response was stunned silence. After a moment he went on: &ldquo;Do you think you could handle it?&rdquo; I said that I could, but there were a couple of problems. I was the youngest soldier in the office, and more importantly, most of the other guys outranked me. They both burst out laughing and explained that was not a problem. I was promoted to Sp5, the equivalent of a sergeant &mdash; accompanied by a nice jump in salary. I should mention I was the only one in the office who had not graduated from college.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            My first real foray into leadership began with an Air Force base church youth group. It has been said that much of life is just showing up. I was pretty good at that, but I don&rsquo;t think I brought much to that early position. I was definitely a procrastinator and not particularly strong with original ideas. I would find out later that as a teacher originality was not my strongest suit, but I had an ability to look at something and know instantly whether it was something that would work with students. Helping write curriculum for the school district, New York State, and for the Long Island newspaper Newsday allowed me to use that skill. Through some other minor leadership roles in youth groups growing up, and serving as the ROTC Commander of the Stetson Rifles in high school, I had gotten some experience talking in front of a group. I loved to tell a good story and found that teaching history could basically be done through stories. This book largely comes from the many times I was told by students I taught in sixth grade through graduate school that I needed to write one.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            The Army had thrown me into another situation which finely tuned any leadership skills I had. Starting with Platoon Guide in basic training, then Chief Orders Clerk in Korea, I was now the head of Mental Testing. I knew people need to feel they are working with you, not just for you. I realized a good leader didn&rsquo;t just tell people what to do but led by example. Respect had to be earned, as it does not come with a position. I learned you can&rsquo;t treat everyone the same, even though that seems the logical thing to do. Getting the most out of the people working with you requires understanding some people need a pat on the back, while others need a kick in the rear, still others work best when left alone. Years down the road I would be a better Department Chair and Principal because of my Army days.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            As I mentioned, it was imperative the first test start on time to ensure the rest of the day moved smoothly. Jeff just didn&rsquo;t seem to get this. On a fairly regular basis his partner that day would just be babysitting the recruits until he showed up. I talked to him about this several times, but the behavior continued. Finally, I had just had enough. I took him aside after another late start and began quietly enough but eventually had him up against a wall with my nose inches from his. I was yelling at a volume no one in the office had ever heard. Finally, I shouted: &ldquo;Just tell me you won&rsquo;t do it again!&rdquo; We looked at each other in the silence, and he finally stammered: &ldquo;I can&rsquo;t.&rdquo; We continued to stare at each other, and I think I was the one who laughed first. We both knew he could not promise that it would never, ever, happen again. But he really tried after that, and with great success.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            I could make this book just about my experiences interviewing those Category V failures with ten or more years of education. For those failing on purpose, it was pretty easy to prove they were actually able to read. I had a thick stack of cards with pictures on them. I would simply show the recruit picture after picture in quick succession asking him to identify what he was seeing: &ldquo;Car&rdquo;, &ldquo;Dog&rdquo;, &ldquo;Flower&rdquo;, &ldquo;Boat&rdquo;, &ldquo;Shovel&rdquo;, &ldquo;Chicken.&rdquo; After twenty or thirty pictures some of them would be repeated, but with a slight variation &mdash; &ldquo;Spade&rdquo; instead of &ldquo;Shovel,&rdquo; &ldquo;Puppy&rdquo; instead of &ldquo;Dog.&rdquo; What the recruit who really could read didn&rsquo;t realize was that by moving in quick succession he would begin to read the words &mdash; and inevitably state the less common variations. At this point I would put the cards down and tell the recruit I know he actually can read. They pretty much always asked to take the test again.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            One of the most amazing interviews I had was with a young man that got all of the fifty picture questions right, and hardly any of the written ones. He was a coal miner from Harlan County, Kentucky. There was something about his eyes that exuded intelligence. He had legitimately gotten all those picture questions correct &mdash; and had also legitimately badly failed the written portion as he simply could not read. He was completely uneducated, something hard to imagine in our modern world. Of the two of us, the man across from me was the far more intelligent. He would not see Vietnam but would be returning to the coal mine.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            I wondered how the young Black man I was about to interview had failed the test as he had completed thirteen years of education. It turned out he was the first in his family to graduate from high school and was starting his second year at Tennessee A &amp; I, now called Tennessee State University &mdash; the only state-funded historically Black university in Tennessee. He was proud of what he had accomplished so far. Sadly, the segregated schools he had attended were of such poor quality that while he earned a high school diploma, he could not pass the Army&rsquo;s Entrance Exam. He had been &ldquo;socially&rdquo; passed along from grade to grade. I couldn&rsquo;t know what the future held for him, but as one of the nicest young men I ever met, I certainly wished the best for him.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-8">
+            The young man sitting across from me seemed excited to be there. I told him I wanted to ask him a question, and he should think very carefully before answering. &ldquo;Did you fail the test on purpose?&rdquo; His expression immediately changed from excitement to deep dread. &ldquo;No, of course not,&rdquo; he replied, and tears began welling up in his eyes. He had been in trouble much of his life. A judge &mdash; a former military man &mdash; saw something in him and said that if he joined the Army, he would suspend his sentence. &ldquo;You have to let me in! This is my last chance.&rdquo; He had failed by one point. When I finished checking his answer sheet, it became one point higher.
+          </p>
+          <p class="font-body text-lg text-tertiary/75 leading-relaxed mb-10">
+            What I did was not just wrong, but illegal. To this day I wonder how life unfolded for him. Did he even survive Vietnam? Did he come home with PTSD? Did he become the different person he and the judge thought he could be? I&rsquo;ll never know, but I sure hope so.
+          </p>
+
+          <!-- Photos -->
+          <div class="grid grid-cols-2 gap-3 mb-6" style="max-height: 320px;">
+            <div class="overflow-hidden h-full">
+              <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608670/FD12D8E3-5D84-4194-87F5-C08B0C7611CC_2_gwricl.jpg" alt="Bill Evans" class="w-full h-full object-cover" />
+            </div>
+            <div class="overflow-hidden h-full">
+              <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608670/BFD101C2-6F1B-44C0-8D2A-D8D72749D85A_2_zgixyf.jpg" alt="Bill Evans" class="w-full h-full object-cover" />
+            </div>
+          </div>
         </div>
+
         <p class="text-xs uppercase tracking-[0.2em] text-secondary/60 font-serif mb-2">— From Part Two</p>
       </div>
     </div>
@@ -648,6 +706,16 @@
        SCRIPTS
   ============================================================ -->
   <script>
+    // --- Excerpt expand/collapse ---
+    function toggleExcerpt(btn) {
+      const full = btn.nextElementSibling;
+      const isOpen = !full.classList.contains('hidden');
+      full.classList.toggle('hidden');
+      const arrow = btn.querySelector('.toggle-arrow');
+      btn.childNodes[0].textContent = isOpen ? 'Read the full excerpt ' : 'Collapse ';
+      arrow.textContent = isOpen ? '↓' : '↑';
+    }
+
     // --- Scroll progress bar ---
     window.addEventListener('scroll', function () {
       const scrollTop = window.scrollY;
