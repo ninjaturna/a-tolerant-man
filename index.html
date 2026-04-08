@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Tolerant Man — A Memoir by Bill</title>
+  <meta name="description" content="A memoir of a life lived across continents, cultures, and quiet courage. Join the waiting list for A Tolerant Man.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   '#fbf9f4',
+            secondary: '#af2b3e',
+            tertiary:  '#352400',
+          },
+          fontFamily: {
+            serif: ['"Noto Serif"', 'Georgia', 'serif'],
+            body:  ['"Newsreader"', 'Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Scroll progress bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: #af2b3e;
+      z-index: 9999;
+      transition: width 0.08s linear;
+      pointer-events: none;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Newsreader', Georgia, serif;
+      background-color: #fbf9f4;
+      color: #352400;
+    }
+
+    /* Hide scrollbar on reflections wall */
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Placeholder image blocks */
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #e8e2d9;
+      color: #9e8e7a;
+      font-family: 'Noto Serif', Georgia, serif;
+      font-size: 0.75rem;
+      text-align: center;
+      gap: 0.25rem;
+    }
+  </style>
+</head>
+
+<body class="bg-primary text-tertiary antialiased">
+
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar" class="fixed top-2 left-0 right-0 z-50 transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-6 flex items-center justify-between h-14 bg-primary/95 backdrop-blur-sm border border-tertiary/10 shadow-sm">
+
+      <!-- Logo -->
+      <a href="#" class="font-serif font-bold text-tertiary text-base tracking-tight hover:text-secondary transition-colors">
+        A Tolerant Man
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-body text-tertiary/70">
+        <a href="#the-novel"    class="hover:text-secondary transition-colors">The Novel</a>
+        <a href="#excerpts"     class="hover:text-secondary transition-colors">Excerpts</a>
+        <a href="#reflections"  class="hover:text-secondary transition-colors">Reflections</a>
+        <a href="#waiting-list" class="hover:text-secondary transition-colors">Waiting List</a>
+      </div>
+
+      <!-- Pre-Order CTA -->
+      <a href="#waiting-list" class="hidden md:inline-flex items-center bg-secondary text-white text-sm px-5 py-2 font-serif font-semibold hover:bg-secondary/85 transition-colors">
+        Pre-Order
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-tertiary transition-all duration-200" id="bar1"></span>
+        <span class="block w-6 h-0.5 bg-tertiary transition-all duration-200" id="bar2"></span>
+        <span class="block w-4 h-0.5 bg-tertiary transition-all duration-200" id="bar3"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-tertiary/10 px-6 py-6 space-y-4 text-base font-body">
+      <a href="#the-novel"    class="block text-tertiary/80 hover:text-secondary transition-colors py-1">The Novel</a>
+      <a href="#excerpts"     class="block text-tertiary/80 hover:text-secondary transition-colors py-1">Excerpts</a>
+      <a href="#reflections"  class="block text-tertiary/80 hover:text-secondary transition-colors py-1">Reflections</a>
+      <a href="#waiting-list" class="block text-tertiary/80 hover:text-secondary transition-colors py-1">Waiting List</a>
+      <a href="#waiting-list" class="inline-block bg-secondary text-white px-6 py-2.5 font-serif font-semibold hover:bg-secondary/85 transition-colors mt-2">
+        Pre-Order
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="min-h-screen flex items-center pt-20 pb-16 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+      <!-- Left: Text -->
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-5">Coming Soon</p>
+        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-tertiary leading-[1.05] mb-6">
+          A Tolerant<br>Man
+        </h1>
+        <p class="font-body text-xl md:text-2xl italic text-tertiary/60 mb-10 leading-relaxed max-w-md">
+          A memoir of a life lived across continents, cultures, and quiet courage.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#waiting-list" class="bg-secondary text-white px-7 py-3.5 font-serif font-semibold text-sm hover:bg-secondary/85 transition-colors">
+            Join the Waiting List
+          </a>
+          <a href="#excerpts" class="border border-tertiary/40 text-tertiary px-7 py-3.5 font-serif font-semibold text-sm hover:border-tertiary hover:bg-tertiary/5 transition-colors">
+            Read an Excerpt
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: 3-Photo Grid -->
+      <div class="grid grid-cols-2 grid-rows-2 gap-3" style="height: 520px;">
+
+        <!-- Left tall — row-span-2 -->
+        <div class="row-span-2 overflow-hidden">
+          <!-- TODO: hero-1 — Replace with Cloudinary URL for IMG_2460.jpeg -->
+          <div class="img-placeholder w-full h-full">
+            <span class="material-symbols-outlined" style="font-size:2rem;opacity:0.4;">image</span>
+            <span style="opacity:0.5;">Photo 1</span>
+            <span style="opacity:0.35;font-size:0.65rem;">IMG_2460.jpeg</span>
+          </div>
+        </div>
+
+        <!-- Top right -->
+        <div class="overflow-hidden">
+          <!-- TODO: hero-2 — Replace with Cloudinary URL for IMG_2456 (supply JPEG — HEIC won't render in Chrome/Firefox) -->
+          <div class="img-placeholder w-full h-full">
+            <span class="material-symbols-outlined" style="font-size:2rem;opacity:0.4;">image</span>
+            <span style="opacity:0.5;">Photo 2</span>
+            <span style="opacity:0.35;font-size:0.65rem;">IMG_2456 (need JPEG)</span>
+          </div>
+        </div>
+
+        <!-- Bottom right -->
+        <div class="overflow-hidden">
+          <!-- TODO: hero-3 — Replace with Cloudinary URL for IMG_2457 (supply JPEG — HEIC won't render in Chrome/Firefox) -->
+          <div class="img-placeholder w-full h-full">
+            <span class="material-symbols-outlined" style="font-size:2rem;opacity:0.4;">image</span>
+            <span style="opacity:0.5;">Photo 3</span>
+            <span style="opacity:0.35;font-size:0.65rem;">IMG_2457 (need JPEG)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THE NOVEL
+  ============================================================ -->
+  <section id="the-novel" class="py-24 px-6 md:px-12 bg-tertiary text-primary">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">The Novel</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold leading-tight mb-10">
+        A life too full<br>for one telling
+      </h2>
+      <div class="space-y-6 font-body text-lg md:text-xl text-primary/75 leading-relaxed">
+        <p>
+          Bill has been many things to many people — a student, a teacher, a soldier, a traveller, a colleague, a mentor. This is his story, told in his own words: candid, funny, and harder than it looks to have lived.
+        </p>
+        <p class="italic">
+          <em>A Tolerant Man</em> is a memoir in progress. The first readers have already weighed in. What you find here is a record of that early wave of enthusiasm — and an invitation to join it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       EXCERPTS
+  ============================================================ -->
+  <section id="excerpts" class="py-24 px-6 md:px-12">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">Excerpts</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-tertiary leading-tight mb-16">
+        Read the opening pages
+      </h2>
+
+      <!-- Part One -->
+      <div class="mb-16 pl-8 border-l-2 border-secondary">
+        <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-3">Part One</p>
+        <h3 class="font-serif text-2xl font-bold text-tertiary mb-6">The Beginning</h3>
+        <!-- TODO: Bill to provide real excerpt text for Part One -->
+        <p class="font-body text-lg text-tertiary/50 italic leading-relaxed">
+          Excerpt coming soon. Bill is finalising the opening pages.
+        </p>
+      </div>
+
+      <!-- Part Two -->
+      <div class="pl-8 border-l-2 border-secondary">
+        <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-3">Part Two</p>
+        <h3 class="font-serif text-2xl font-bold text-tertiary mb-6">The Middle Years</h3>
+        <!-- TODO: Bill to provide real excerpt text for Part Two -->
+        <p class="font-body text-lg text-tertiary/50 italic leading-relaxed">
+          Excerpt coming soon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PODCAST / YOUTUBE
+  ============================================================ -->
+  <section id="podcast" class="py-24 px-6 md:px-12 bg-tertiary/[0.04]">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">Listen &amp; Watch</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-tertiary leading-tight mb-4">
+        Thoughts From a Tolerant Man
+      </h2>
+      <p class="font-body text-lg text-tertiary/60 italic mb-12 max-w-xl">
+        Bill's video conversations — stories, reflections, and observations from a life well-examined.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <!-- Thumbnail placeholder -->
+        <div class="aspect-video overflow-hidden">
+          <!-- TODO: podcast-thumb — Replace with Cloudinary URL for IMG_2458 (supply JPEG) -->
+          <div class="img-placeholder w-full h-full">
+            <span class="material-symbols-outlined" style="font-size:2.5rem;opacity:0.4;">play_circle</span>
+            <span style="opacity:0.5;">Podcast Thumbnail</span>
+            <span style="opacity:0.35;font-size:0.65rem;">IMG_2458 (need JPEG)</span>
+          </div>
+        </div>
+
+        <!-- Text + CTA -->
+        <div>
+          <p class="font-body text-lg text-tertiary/70 leading-relaxed mb-8 italic">
+            Before the book, there were the stories. Watch Bill recount the moments that shaped a tolerant life — in his own voice.
+          </p>
+          <a href="https://youtube.com/playlist?list=PL1HGlEZM9flFKuf-ZtKnfaBHOpDp7Kk96"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 bg-secondary text-white px-7 py-3.5 font-serif font-semibold text-sm hover:bg-secondary/85 transition-colors">
+            <span class="material-symbols-outlined" style="font-size:1.1rem;">play_circle</span>
+            Watch the Playlist
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WAITING LIST
+  ============================================================ -->
+  <section id="waiting-list" class="py-24 px-6 md:px-12 bg-tertiary text-primary">
+    <div class="max-w-xl mx-auto text-center">
+      <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">Be First to Know</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold leading-tight mb-5">
+        Join the Waiting List
+      </h2>
+      <p class="font-body text-lg text-primary/65 italic mb-10 leading-relaxed">
+        When the book is ready to pre-order, you'll hear first. No spam — just one email when the moment arrives.
+      </p>
+
+      <form id="waiting-list-form" class="space-y-4 text-left" novalidate>
+        <input
+          type="text"
+          placeholder="Your name"
+          required
+          class="w-full px-4 py-3.5 bg-white/10 border border-white/20 text-primary placeholder-primary/35 font-body text-base focus:outline-none focus:border-secondary transition-colors"
+        >
+        <input
+          type="email"
+          placeholder="Your email address"
+          required
+          class="w-full px-4 py-3.5 bg-white/10 border border-white/20 text-primary placeholder-primary/35 font-body text-base focus:outline-none focus:border-secondary transition-colors"
+        >
+        <button
+          type="submit"
+          class="w-full bg-secondary text-white py-3.5 font-serif font-semibold text-sm hover:bg-secondary/85 transition-colors"
+        >
+          Add Me to the List
+        </button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       REFLECTIONS WALL
+  ============================================================ -->
+  <section id="reflections" class="py-24 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">From the First Readers</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-tertiary leading-tight mb-12">
+        What people are saying
+      </h2>
+
+      <!-- Horizontal scroll -->
+      <div class="flex gap-5 overflow-x-auto pb-6 -mx-6 px-6 snap-x snap-mandatory scrollbar-hide">
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"I don't think I've been more invested in a book like I have been about this one — the man is a legend!"</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Teff</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"If there was ever a great storyteller in my life, it's Bill. I can't wait to learn more about his incredible life!"</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Ayesha</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"I know I'm not the only one who can't wait to hear these stories. I'll be reading it in your voice too. All the best 👏🏾"</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Amrit</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Colleague</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"I remember working with you when you decided to embark on your cross country journey..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Yansy M.</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"It would be an absolute honor to have a copy of and read your book..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Noor</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"A lot of Apple peeps are looking forward to your book..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Kosi Victor</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Colleague</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"Whether it's wisdom, insight, adventurous stories..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Suki P.</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"It's rare to meet someone who can share a new story about their life every time you speak to them..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Chidlet P.</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"Bill has proven to be generous with his knowledge and wisdom..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Justin D.</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"I met Bill 10+ years ago, and his kindness helped turn a nervous kid..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Noel H.</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"Bill, I can't wait to see your story on paper!..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Brentley Williams</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Colleague</p>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
+          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"Bill is someone who has experienced many lives. He has been a student, teacher, army man..."</p>
+          <p class="font-serif text-sm font-semibold text-tertiary">Morgan Garces</p>
+          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       REFLECTION SUBMISSION FORM
+  ============================================================ -->
+  <section id="leave-reflection" class="py-24 px-6 md:px-12 bg-tertiary/[0.04]">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">Your Turn</p>
+      <h2 class="font-serif text-4xl font-bold text-tertiary leading-tight mb-4">
+        Leave a reflection
+      </h2>
+      <p class="font-body text-lg text-tertiary/60 italic mb-10 leading-relaxed">
+        Do you know Bill? Have a memory, message, or early reaction to share? Leave it here.
+      </p>
+
+      <form id="reflection-form" class="space-y-4" novalidate>
+        <div class="grid md:grid-cols-2 gap-4">
+          <input
+            type="text"
+            placeholder="Your name"
+            required
+            class="px-4 py-3.5 bg-white border border-tertiary/15 text-tertiary placeholder-tertiary/35 font-body text-base focus:outline-none focus:border-secondary transition-colors"
+          >
+          <input
+            type="email"
+            placeholder="Your email (not published)"
+            required
+            class="px-4 py-3.5 bg-white border border-tertiary/15 text-tertiary placeholder-tertiary/35 font-body text-base focus:outline-none focus:border-secondary transition-colors"
+          >
+        </div>
+        <select
+          required
+          class="w-full px-4 py-3.5 bg-white border border-tertiary/15 text-tertiary font-body text-base focus:outline-none focus:border-secondary transition-colors appearance-none"
+        >
+          <option value="" disabled selected>Your relationship to Bill</option>
+          <option value="friend">Friend</option>
+          <option value="colleague">Colleague</option>
+          <option value="family">Family</option>
+          <option value="reader">Reader</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea
+          placeholder="Your reflection, memory, or message..."
+          rows="5"
+          required
+          class="w-full px-4 py-3.5 bg-white border border-tertiary/15 text-tertiary placeholder-tertiary/35 font-body text-base focus:outline-none focus:border-secondary transition-colors resize-none"
+        ></textarea>
+        <div class="flex flex-wrap gap-5">
+          <label class="flex items-center gap-2.5 font-body text-sm text-tertiary/70 cursor-pointer">
+            <input type="radio" name="permission" value="yes" class="accent-secondary">
+            <span>Yes, you may share this on the site</span>
+          </label>
+          <label class="flex items-center gap-2.5 font-body text-sm text-tertiary/70 cursor-pointer">
+            <input type="radio" name="permission" value="no" class="accent-secondary">
+            <span>No, keep this private</span>
+          </label>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-tertiary text-primary py-3.5 font-serif font-semibold text-sm hover:bg-tertiary/80 transition-colors"
+        >
+          Send Reflection
+        </button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FACEBOOK CTA
+  ============================================================ -->
+  <section class="py-24 px-6 md:px-12 bg-secondary">
+    <div class="max-w-xl mx-auto text-center text-white">
+      <h2 class="font-serif text-4xl font-bold mb-4">Join the Community</h2>
+      <p class="font-body text-lg text-white/75 italic mb-10 leading-relaxed">
+        Connect with other readers and follow Bill's journey in the private Facebook group.
+      </p>
+      <a href="https://www.facebook.com/groups/1296045168596710"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 bg-white text-secondary px-8 py-3.5 font-serif font-semibold text-sm hover:bg-white/90 transition-colors">
+        <span class="material-symbols-outlined" style="font-size:1.1rem;">groups</span>
+        Join the Facebook Group
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="py-8 px-6 md:px-12 border-t border-tertiary/10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-body text-tertiary/40">
+      <p>© 2025 A Tolerant Man. All Rights Reserved.</p>
+      <div class="flex gap-6">
+        <a href="#the-novel"    class="hover:text-tertiary transition-colors">The Novel</a>
+        <a href="#excerpts"     class="hover:text-tertiary transition-colors">Excerpts</a>
+        <a href="#reflections"  class="hover:text-tertiary transition-colors">Reflections</a>
+        <a href="#waiting-list" class="hover:text-tertiary transition-colors">Waiting List</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script>
+    // --- Scroll progress bar ---
+    window.addEventListener('scroll', function () {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      document.getElementById('progress-bar').style.width = pct + '%';
+    }, { passive: true });
+
+    // --- Mobile nav toggle ---
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar3 = document.getElementById('bar3');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      bar1.style.transform = isOpen ? '' : 'rotate(45deg) translate(5px, 5px)';
+      bar3.style.transform = isOpen ? '' : 'rotate(-45deg) translate(3px, -3px)';
+      bar3.style.width     = isOpen ? '' : '1.5rem';
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+        bar1.style.transform = '';
+        bar3.style.transform = '';
+        bar3.style.width = '';
+      });
+    });
+
+    // --- Form endpoint ---
+    const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyEojhBboxKI2-3oHCwK_QQlZOWOVvaLsV-JRmJZ2DGEzn0q2wgDZUHYWSfNvj0AwUI/exec';
+
+    // --- Waiting List form ---
+    document.getElementById('waiting-list-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Adding you...';
+      btn.disabled = true;
+
+      const data = {
+        formType: 'waiting_list',
+        name:  this.querySelector('input[type="text"]').value,
+        email: this.querySelector('input[type="email"]').value,
+      };
+
+      try {
+        await fetch(FORM_ENDPOINT, {
+          method:  'POST',
+          mode:    'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(data),
+        });
+        btn.textContent = "You're on the list ✓";
+        btn.style.background = '#166534'; // green-800
+      } catch {
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+      }
+      // Note: mode:'no-cors' always resolves — check Google Sheets to confirm submissions
+    });
+
+    // --- Reflection form ---
+    document.getElementById('reflection-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const checkedPermission = this.querySelector('input[name="permission"]:checked');
+      const data = {
+        formType:     'atm_reflection',
+        name:         this.querySelector('input[type="text"]').value,
+        email:        this.querySelector('input[type="email"]').value,
+        relationship: this.querySelector('select').value,
+        comment:      this.querySelector('textarea').value,
+        permission:   checkedPermission
+                        ? checkedPermission.nextElementSibling.textContent.trim()
+                        : 'not specified',
+      };
+
+      try {
+        await fetch(FORM_ENDPOINT, {
+          method:  'POST',
+          mode:    'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(data),
+        });
+        btn.textContent = 'Reflection sent ✓';
+        this.reset();
+      } catch {
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+</html>
