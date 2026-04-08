@@ -58,21 +58,6 @@
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-    /* Placeholder image blocks */
-    .img-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #e8e2d9;
-      color: #9e8e7a;
-      font-family: 'Noto Serif', Georgia, serif;
-      font-size: 0.75rem;
-      text-align: center;
-      gap: 0.25rem;
-    }
   </style>
 </head>
 
@@ -156,32 +141,29 @@
 
         <!-- Left tall — row-span-2 -->
         <div class="row-span-2 overflow-hidden">
-          <!-- TODO: hero-1 — Replace with Cloudinary URL for IMG_2460.jpeg -->
-          <div class="img-placeholder w-full h-full">
-            <span class="material-symbols-outlined" style="font-size:2rem;opacity:0.4;">image</span>
-            <span style="opacity:0.5;">Photo 1</span>
-            <span style="opacity:0.35;font-size:0.65rem;">IMG_2460.jpeg</span>
-          </div>
+          <img
+            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608676/1_obx1ix.jpg"
+            alt="Bill Evans"
+            class="w-full h-full object-cover"
+          />
         </div>
 
         <!-- Top right -->
         <div class="overflow-hidden">
-          <!-- TODO: hero-2 — Replace with Cloudinary URL for IMG_2456 (supply JPEG — HEIC won't render in Chrome/Firefox) -->
-          <div class="img-placeholder w-full h-full">
-            <span class="material-symbols-outlined" style="font-size:2rem;opacity:0.4;">image</span>
-            <span style="opacity:0.5;">Photo 2</span>
-            <span style="opacity:0.35;font-size:0.65rem;">IMG_2456 (need JPEG)</span>
-          </div>
+          <img
+            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608677/915793DC-5528-4111-B767-54407BFA8B80_agr2uo.jpg"
+            alt="Bill Evans"
+            class="w-full h-full object-cover"
+          />
         </div>
 
         <!-- Bottom right -->
         <div class="overflow-hidden">
-          <!-- TODO: hero-3 — Replace with Cloudinary URL for IMG_2457 (supply JPEG — HEIC won't render in Chrome/Firefox) -->
-          <div class="img-placeholder w-full h-full">
-            <span class="material-symbols-outlined" style="font-size:2rem;opacity:0.4;">image</span>
-            <span style="opacity:0.5;">Photo 3</span>
-            <span style="opacity:0.35;font-size:0.65rem;">IMG_2457 (need JPEG)</span>
-          </div>
+          <img
+            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608673/7551A4F1-C123-4581-A5A8-31DC5CBA1E3E_hw3xby.jpg"
+            alt="Bill Evans"
+            class="w-full h-full object-cover"
+          />
         </div>
 
       </div>
@@ -223,20 +205,18 @@
       <!-- Part One -->
       <div class="mb-16 pl-8 border-l-2 border-secondary">
         <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-3">Part One</p>
-        <h3 class="font-serif text-2xl font-bold text-tertiary mb-6">The Beginning</h3>
-        <!-- TODO: Bill to provide real excerpt text for Part One -->
-        <p class="font-body text-lg text-tertiary/50 italic leading-relaxed">
-          Excerpt coming soon. Bill is finalising the opening pages.
+        <h3 class="font-serif text-2xl font-bold text-tertiary mb-6">The Road West</h3>
+        <p class="font-body text-lg text-tertiary/70 leading-relaxed italic">
+          &ldquo;The excerpts will be shared here ahead of publication. Check back soon &mdash; or join the waiting list to be notified the moment they&rsquo;re available.&rdquo;
         </p>
       </div>
 
       <!-- Part Two -->
       <div class="pl-8 border-l-2 border-secondary">
         <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-3">Part Two</p>
-        <h3 class="font-serif text-2xl font-bold text-tertiary mb-6">The Middle Years</h3>
-        <!-- TODO: Bill to provide real excerpt text for Part Two -->
-        <p class="font-body text-lg text-tertiary/50 italic leading-relaxed">
-          Excerpt coming soon.
+        <h3 class="font-serif text-2xl font-bold text-tertiary mb-6">People Along the Way</h3>
+        <p class="font-body text-lg text-tertiary/70 leading-relaxed italic">
+          &ldquo;Every road has its characters. Part Two introduces the people who changed the course of things &mdash; and a few who didn&rsquo;t know they did.&rdquo;
         </p>
       </div>
     </div>
@@ -258,14 +238,13 @@
 
       <div class="grid md:grid-cols-2 gap-10 items-center">
 
-        <!-- Thumbnail placeholder -->
+        <!-- Podcast thumbnail -->
         <div class="aspect-video overflow-hidden">
-          <!-- TODO: podcast-thumb — Replace with Cloudinary URL for IMG_2458 (supply JPEG) -->
-          <div class="img-placeholder w-full h-full">
-            <span class="material-symbols-outlined" style="font-size:2.5rem;opacity:0.4;">play_circle</span>
-            <span style="opacity:0.5;">Podcast Thumbnail</span>
-            <span style="opacity:0.35;font-size:0.65rem;">IMG_2458 (need JPEG)</span>
-          </div>
+          <img
+            src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608672/FD12D8E3-5D84-4194-87F5-C08B0C7611CC_fiauak.jpg"
+            alt="Thoughts From a Tolerant Man — video series"
+            class="w-full h-full object-cover"
+          />
         </div>
 
         <!-- Text + CTA -->
@@ -337,76 +316,199 @@
       <!-- Horizontal scroll -->
       <div class="flex gap-5 overflow-x-auto pb-6 -mx-6 px-6 snap-x snap-mandatory scrollbar-hide">
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"I don't think I've been more invested in a book like I have been about this one — the man is a legend!"</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Teff</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I had heard a couple of these stories before, I&rsquo;m so glad you&rsquo;re putting this all together.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Rob</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"If there was ever a great storyteller in my life, it's Bill. I can't wait to learn more about his incredible life!"</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Ayesha</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I&rsquo;ve been anxiously waiting since you shared you were working on this book.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Tim</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"I know I'm not the only one who can't wait to hear these stories. I'll be reading it in your voice too. All the best 👏🏾"</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Amrit</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Colleague</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I don&rsquo;t think I&rsquo;ve been more invested in a book like I have been about this one &mdash; the man is a legend!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Teff</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"I remember working with you when you decided to embark on your cross country journey..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Yansy M.</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;You&rsquo;ve made me want to take a similar trip, to see what it would do for me.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Richard</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Instagram</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"It would be an absolute honor to have a copy of and read your book..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Noor</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Bill&rsquo;s superpower is that of plunging into life headfirst, every time, to be of help. Whether it&rsquo;s teaching, guiding, celebrating, or supporting others; or just to challenge those who don&rsquo;t. He has never been on the sidelines. That he has given us this book is another such example. I can&rsquo;t wait to read it.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Joe Podgor</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"A lot of Apple peeps are looking forward to your book..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Kosi Victor</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Colleague</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I&rsquo;ve missed not being able to talk to you at work, I think this will help take the place.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Lawrence</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"Whether it's wisdom, insight, adventurous stories..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Suki P.</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I remember working with you when you decided to embark on your cross country journey and following along with your latest location! We always loved hearing about your lived experiences back then, and now cannot wait to read about your life and reflections.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Yansy M.</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"It's rare to meet someone who can share a new story about their life every time you speak to them..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Chidlet P.</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;If there was ever a great storyteller in my life, it&rsquo;s Bill. I can&rsquo;t wait to learn more about his incredible life!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Ayesha</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"Bill has proven to be generous with his knowledge and wisdom..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Justin D.</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Can&rsquo;t wait to read &mdash; we&rsquo;ve been waiting ☺️&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Dana Joseph</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"I met Bill 10+ years ago, and his kindness helped turn a nervous kid..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Noel H.</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Let&rsquo;s gooo!!! Looking forward to it!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Martha Duque</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"Bill, I can't wait to see your story on paper!..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Brentley Williams</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Colleague</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Bill, Amalia &amp; I have watched you writing your book &amp; we have encouraged you to finish it. We are very excited to see the book! What an adventure, my good friend.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Phil Roberts</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
-        <div class="flex-none w-72 md:w-80 snap-start border-l-2 border-secondary bg-tertiary/[0.03] p-6">
-          <p class="font-body text-base italic text-tertiary/75 leading-relaxed mb-5">"Bill is someone who has experienced many lives. He has been a student, teacher, army man..."</p>
-          <p class="font-serif text-sm font-semibold text-tertiary">Morgan Garces</p>
-          <p class="font-body text-xs text-tertiary/45 mt-0.5">Friend</p>
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I know I&rsquo;m not the only one who can&rsquo;t wait to hear these stories. I&rsquo;ll be reading it in your voice too. All the best 👏🏾&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Amrit</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I remember the first time I met you was when you came back from that cross country bike ride and I have been impressed with you ever since! I have cherished your insight during our conversations, and am absolutely thrilled to read your book.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Kristy Colon</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I am excited for your book to come out. When I was 20, I did a book report on a similar bike adventure so I&rsquo;m excited to hear it from your point of view. You are such a great speaker and great person. I&rsquo;m so excited.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Jess</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I cannot wait to read this!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Jose</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;It would be an absolute honor to have a copy of and read your book. Your passionate story telling captivated all of us who were privileged to hear you share. Can&rsquo;t wait to see this book come to fruition and hopefully this will be one of many books you will write.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Noor</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Cannot wait to get my hands on a copy!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Cody</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Listen, man. I don&rsquo;t even know how to read. But I&rsquo;m willing to learn just so I can enjoy my friend and mentor&rsquo;s book.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Kosi Victor</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;A lot of Apple peeps are looking forward to your book. You took us under your wing and have shown up in our lives in such invaluable ways. We can&rsquo;t wait to learn even more about you.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Kosi Victor</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Having been friends with Bill since sophomore year of high school there&rsquo;s more that I don&rsquo;t know about Bill than what I do. Looking forward to filling in some of the blanks.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Mike</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;What a fun project this is, brother Bill! I&rsquo;m so looking forward to your stories and insights! &lsquo;Tis a good &ldquo;big brother&rdquo; kind of thing you are doing! Can&rsquo;t wait to see!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Robert Evans</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Bill, I can&rsquo;t wait to see your story on paper! You&rsquo;re such a great storyteller &mdash; you have such a wealth of knowledge and I can&rsquo;t wait for you to share it with the world!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Brentley Williams</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I know this book will be a huge success, can&rsquo;t wait to read it.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Waleska Rivera</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I met Bill over a decade ago and have never forgotten how his kindness helped turn a nervous young kid into someone who felt at home among peers. When I first met Bill, EVERYONE knew Bill, because he gravitates people towards him with his openness and joy. I cannot wait to read more about his life, and see how his story inspires yet another generation to be their best selves.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Noel H.</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Whether it&rsquo;s wisdom, insight, adventurous stories, or simply the positivity he radiates, Bill exudes it all. So when I heard he was writing a book, I knew I had to read it. The Tolerant Man is bound to be incredible, because that&rsquo;s just who Bill is.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Suki Parisca</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;It&rsquo;s rare to meet someone who can share a new story about their life every time you speak to them. This is one of the few times that a person I thought SHOULD write a book actually did it. So excited for this read. 💌&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Chidlet Pierre</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I will always think fondly of my time spent in Miami working alongside Bill at the Apple store. He was like a dad to us all. Always there to offer a hug or a tidbit of advice, a glimpse into his history and his ever genuine self. He always showed up for us. I can&rsquo;t wait to get a closer look at the life he has lived so far!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Tarah Noonan</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I feel honored to know you and reminded of how fabulous you are. I always look forward to our golf rounds where we shared 20 years of stories. I truly look forward to reading the book and saying I knew you when!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Beth Tobin</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I spent the first 8 years of my professional career with Bill. Beyond just his stature, he was easy to find, a constant pillar of stability and calm among a constant sea of chaos. A man of many, many wise words!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Nick Scheer</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Bill has proven to be generous with his knowledge and wisdom and a very dedicated person, which is why I can&rsquo;t wait to have a copy of this book in my hands.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Justin Dinkins</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I&rsquo;m so looking forward to reading your upcoming book, Bill! For almost twenty years now I&rsquo;ve been privileged to consider you a friend and a voice of great wisdom. Good luck in the final stretch &mdash; writing a book is a feat not many take on but must be so incredibly rewarding.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Mike Lechter</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Bill, I am delighted to recall those days working alongside you at Apple. My fondest memories include seeing you, that tall, slim man in the middle of the floor, eager and happy to assist everyone who walked through those large glass doors. Good times!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Albert</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Anyone that meets Bill knows you cannot just be a colleague! Bill has lived amazing adventures and is able to articulate them as sit-at-the-edge-of-your-seat stories! I cannot wait to read this book! No matter where your journey with Bill starts, it almost assuredly will lead to friend.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Becka</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Congratulations on completing your book. Your unwavering dedication and the powerful story behind it set it up for great success.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Amalia</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I have always found Bill patient, kind and caring! Never heard a harsh word. He has lived his life in a noble way. Can&rsquo;t wait to read the journey thus far!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Anita Wooldridge</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I was a student in Bill&rsquo;s 7th grade social studies class 30 years ago. He was an engaging storyteller, making history come alive for a kid who tended to doze off in her classes. Social studies had been my least favorite subject until that year. I very much look forward to reading his memoir &mdash; not just for the stories, but for the way he tells them.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Marisa Russello</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Bill is a loving old soul with a youthful spirit and timeless wisdom. He is a guiding lighthouse, forever shining his vision, his passion for life, and his unwavering care for others.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Willy Cee</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-white">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;Not only am I excited for this book, I am also so honored to have worked alongside you. My first few months at Apple were amazing due to your mentorship and wealth of overall knowledge. You are amazing, Bill.&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Yida Padilla</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Colleague</p></div>
+        </div>
+
+        <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
+          <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;The amount of stories and wisdom that will be shared through this book! Bill is one of a kind. Always a joy to be around and listen to. Can&rsquo;t wait to read up on the stories I missed!&rdquo;</p>
+          <div><p class="font-serif text-sm font-bold text-tertiary">Ash</p><p class="text-xs uppercase tracking-[0.2em] text-secondary mt-0.5">Friend</p></div>
         </div>
 
       </div>
@@ -619,5 +721,15 @@
     });
   </script>
 
+
+  <!--
+    AVAILABLE CLOUDINARY PHOTOS (Bill Evans — for future use):
+    https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608672/BFD101C2-6F1B-44C0-8D2A-D8D72749D85A_ylxdhl.jpg
+    https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608671/2A9A7314-25D6-4D36-BA01-A317EBF0F089_pcqstc.jpg
+    https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608672/DE4F8E55-0962-482F-9A84-E2112129D873_kysos5.jpg
+    https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608670/BFD101C2-6F1B-44C0-8D2A-D8D72749D85A_2_zgixyf.jpg
+    https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608670/FD12D8E3-5D84-4194-87F5-C08B0C7611CC_2_gwricl.jpg
+    https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608670/8B0112FD-A0C7-48B1-BF0C-A34D963FE03D_oiwscx.jpg
+  -->
 </body>
 </html>
