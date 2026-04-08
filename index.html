@@ -145,7 +145,7 @@
         </div>
 
         <!-- Right: vertical scrolling carousel — full photos, no crop -->
-        <div class="overflow-y-auto h-full flex flex-col gap-2 scrollbar-hide" style="scroll-behavior: smooth;">
+        <div id="hero-carousel" class="overflow-y-auto h-full flex flex-col gap-2 scrollbar-hide" style="scroll-behavior: smooth;">
           <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608672/DE4F8E55-0962-482F-9A84-E2112129D873_kysos5.jpg" alt="Bill Evans" class="w-full" />
           <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610587/4A71EDE7-6E11-43FE-94D0-28C9360431F2_okiqzu.jpg" alt="Bill Evans" class="w-full" />
           <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610596/FullSizeRender_q963a4.heic" alt="Bill Evans" class="w-full" />
@@ -709,6 +709,21 @@
        SCRIPTS
   ============================================================ -->
   <script>
+    // --- Hero carousel auto-scroll ---
+    (function () {
+      const carousel = document.getElementById('hero-carousel');
+      if (!carousel) return;
+      const imgs = carousel.querySelectorAll('img');
+      let idx = 0;
+      setInterval(function () {
+        idx = (idx + 1) % imgs.length;
+        const top = imgs[idx].getBoundingClientRect().top
+                  - carousel.getBoundingClientRect().top
+                  + carousel.scrollTop;
+        carousel.scrollTo({ top: top, behavior: 'smooth' });
+      }, 3000);
+    })();
+
     // --- Excerpt expand/collapse ---
     function toggleExcerpt(btn) {
       const full = btn.nextElementSibling;
