@@ -136,23 +136,19 @@
         </div>
       </div>
 
-      <!-- Right: Hero Photo Grid — tall cover left, 3 stacked right -->
-      <div class="grid grid-cols-2 grid-rows-3 gap-3" style="height: 520px;">
+      <!-- Right: Book cover left, vertical scroll carousel right -->
+      <div class="grid grid-cols-2 gap-3" style="height: 520px;">
 
-        <!-- Left column: book cover image, full height -->
-        <div class="row-span-3 overflow-hidden">
+        <!-- Left: book cover, full height -->
+        <div class="overflow-hidden h-full">
           <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608673/7551A4F1-C123-4581-A5A8-31DC5CBA1E3E_hw3xby.jpg" alt="Bill Evans — A Tolerant Man" class="w-full h-full object-cover object-top" />
         </div>
 
-        <!-- Right column: 3 equal-height photos, cropped from top -->
-        <div class="overflow-hidden">
-          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608672/DE4F8E55-0962-482F-9A84-E2112129D873_kysos5.jpg" alt="Bill Evans" class="w-full h-full object-cover object-top" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610587/4A71EDE7-6E11-43FE-94D0-28C9360431F2_okiqzu.jpg" alt="Bill Evans" class="w-full h-full object-cover object-top" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610596/FullSizeRender_q963a4.heic" alt="Bill Evans" class="w-full h-full object-cover object-top" />
+        <!-- Right: vertical scrolling carousel — full photos, no crop -->
+        <div class="overflow-y-auto h-full flex flex-col gap-2 scrollbar-hide" style="scroll-behavior: smooth;">
+          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775608672/DE4F8E55-0962-482F-9A84-E2112129D873_kysos5.jpg" alt="Bill Evans" class="w-full" />
+          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610587/4A71EDE7-6E11-43FE-94D0-28C9360431F2_okiqzu.jpg" alt="Bill Evans" class="w-full" />
+          <img src="https://res.cloudinary.com/dc6nyyuhd/image/upload/q_auto/f_auto/v1775610596/FullSizeRender_q963a4.heic" alt="Bill Evans" class="w-full" />
         </div>
 
       </div>
