@@ -79,7 +79,7 @@
 
       <!-- Desktop Links -->
       <div class="hidden md:flex items-center gap-7 text-sm font-body text-tertiary/70">
-        <a href="#the-novel"    class="hover:text-secondary transition-colors">The Novel</a>
+        <a href="#the-novel"    class="hover:text-secondary transition-colors">The Book</a>
         <a href="#excerpts"     class="hover:text-secondary transition-colors">Excerpts</a>
         <a href="#reflections"  class="hover:text-secondary transition-colors">Reflections</a>
         <a href="#waiting-list" class="hover:text-secondary transition-colors">Waiting List</a>
@@ -100,7 +100,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-tertiary/10 px-6 py-6 space-y-4 text-base font-body">
-      <a href="#the-novel"    class="block text-tertiary/80 hover:text-secondary transition-colors py-1">The Novel</a>
+      <a href="#the-novel"    class="block text-tertiary/80 hover:text-secondary transition-colors py-1">The Book</a>
       <a href="#excerpts"     class="block text-tertiary/80 hover:text-secondary transition-colors py-1">Excerpts</a>
       <a href="#reflections"  class="block text-tertiary/80 hover:text-secondary transition-colors py-1">Reflections</a>
       <a href="#waiting-list" class="block text-tertiary/80 hover:text-secondary transition-colors py-1">Waiting List</a>
@@ -161,7 +161,7 @@
   ============================================================ -->
   <section id="the-novel" class="py-24 px-6 md:px-12 bg-tertiary text-primary">
     <div class="max-w-4xl mx-auto">
-      <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">The Novel</p>
+      <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">The Book</p>
       <h2 class="font-serif text-4xl md:text-5xl font-bold leading-tight mb-10">
         A life too full<br>for one telling
       </h2>
@@ -396,12 +396,22 @@
   <section id="reflections" class="py-24 px-6 md:px-12">
     <div class="max-w-7xl mx-auto">
       <p class="text-xs uppercase tracking-[0.2em] text-secondary font-serif mb-7">From the First Readers</p>
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-tertiary leading-tight mb-12">
-        What people are saying
-      </h2>
+      <div class="flex items-end justify-between mb-12">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-tertiary leading-tight">
+          What people are saying
+        </h2>
+        <div class="flex gap-2 flex-shrink-0 ml-6">
+          <button id="reflect-prev" aria-label="Scroll left" class="w-10 h-10 flex items-center justify-center border border-tertiary/20 text-tertiary hover:bg-tertiary hover:text-primary transition-colors font-serif text-lg">
+            ←
+          </button>
+          <button id="reflect-next" aria-label="Scroll right" class="w-10 h-10 flex items-center justify-center border border-tertiary/20 text-tertiary hover:bg-tertiary hover:text-primary transition-colors font-serif text-lg">
+            →
+          </button>
+        </div>
+      </div>
 
       <!-- Horizontal scroll -->
-      <div class="flex gap-5 overflow-x-auto pb-6 -mx-6 px-6 snap-x snap-mandatory scrollbar-hide">
+      <div id="reflections-scroll" class="flex gap-5 overflow-x-auto pb-6 -mx-6 px-6 snap-x snap-mandatory scrollbar-hide">
 
         <div class="flex-none w-72 md:w-80 snap-start border border-tertiary/10 p-6 flex flex-col justify-between bg-tertiary/[0.03]">
           <p class="font-body text-base text-tertiary/80 leading-relaxed italic mb-6">&ldquo;I had heard a couple of these stories before, I&rsquo;m so glad you&rsquo;re putting this all together.&rdquo;</p>
@@ -696,7 +706,7 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-body text-tertiary/40">
       <p>© 2025 A Tolerant Man. All Rights Reserved.</p>
       <div class="flex gap-6">
-        <a href="#the-novel"    class="hover:text-tertiary transition-colors">The Novel</a>
+        <a href="#the-novel"    class="hover:text-tertiary transition-colors">The Book</a>
         <a href="#excerpts"     class="hover:text-tertiary transition-colors">Excerpts</a>
         <a href="#reflections"  class="hover:text-tertiary transition-colors">Reflections</a>
         <a href="#waiting-list" class="hover:text-tertiary transition-colors">Waiting List</a>
@@ -722,6 +732,18 @@
                   + carousel.scrollTop;
         carousel.scrollTo({ top: top, behavior: 'smooth' });
       }, 3000);
+    })();
+
+    // --- Reflections scroll controls ---
+    (function () {
+      const track = document.getElementById('reflections-scroll');
+      const STEP = 340;
+      document.getElementById('reflect-prev').addEventListener('click', function () {
+        track.scrollBy({ left: -STEP, behavior: 'smooth' });
+      });
+      document.getElementById('reflect-next').addEventListener('click', function () {
+        track.scrollBy({ left: STEP, behavior: 'smooth' });
+      });
     })();
 
     // --- Excerpt expand/collapse ---
